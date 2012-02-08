@@ -1,0 +1,24 @@
+[user]
+	name = Jason Foreman
+	email = jason@threeve.org
+[core]
+	editor = vim
+	quotepath = false
+	excludesfile = ~/.gitignore-global
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	b = branch
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+	sub = submodule
+	w = whatchanged
+[color]
+	branch = auto
+	diff = auto
+	pager = true
+	status = auto
+	ui = auto
+[apply]
+	whitespace = fix
