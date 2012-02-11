@@ -1,4 +1,6 @@
+" threeve's .gvimrc
 "
+" Author: Jason Foreman <jason@threeve.org>
 
 " Use one of these preferred fonts
 set guifont=Menlo:h12,Consolas:h12,Inconsolata:h12

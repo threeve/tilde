@@ -1,4 +1,6 @@
+" threeve's .vimrc
 "
+" Author: Jason Foreman <jason@threeve.org>
 
 set nocompatible		" Welcome to the future.
 
