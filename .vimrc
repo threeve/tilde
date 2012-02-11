@@ -4,6 +4,10 @@
 
 set nocompatible		" Welcome to the future.
 
+" Pathogen: http://github.com/tpope/vim-pathogen
+silent! call pathogen#infect()
+silent! call pathogen#infect('~/Source/vim-bundles')
+
 set background=dark		" Prefer dark background
 
 syntax on			" syntax highlighting GO!
