@@ -16,3 +16,9 @@ set background=dark		" Prefer dark background
 
 syntax on			" syntax highlighting GO!
 filetype plugin indent on	" file type detection and plugins GO!
+
+" Mapping Basic
+let mapleader=","
+
+" Shortcut Mappings
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
