@@ -8,6 +8,10 @@ set nocompatible		" Welcome to the future.
 silent! call pathogen#infect()
 silent! call pathogen#infect('~/Source/vim-bundles')
 
+" Basic Settings
+set noswapfile			" Having never, ever needed it, turn it off
+
+" Colors, styles, etc.
 set background=dark		" Prefer dark background
 
 syntax on			" syntax highlighting GO!
