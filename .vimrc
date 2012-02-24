@@ -22,3 +22,6 @@ let mapleader=","
 
 " Shortcut Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+" fugitive
+nnoremap <leader>gs :Gstatus<cr>
