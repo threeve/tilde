@@ -21,6 +21,7 @@ filetype plugin indent on	" file type detection and plugins GO!
 set hidden			" allow hidden buffers (don't close)
 set splitbelow			" open horizontal splits below
 set splitright			" open vertical splits to the right
+set switchbuf=usetab		" go to open windows if they exist
 
 " Mapping Basic
 let mapleader=","
