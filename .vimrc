@@ -25,3 +25,5 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " fugitive
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gb :Gblame<cr>
