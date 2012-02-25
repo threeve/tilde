@@ -17,6 +17,11 @@ set background=dark		" Prefer dark background
 syntax on			" syntax highlighting GO!
 filetype plugin indent on	" file type detection and plugins GO!
 
+" buffer and window management
+set hidden			" allow hidden buffers (don't close)
+set splitbelow			" open horizontal splits below
+set splitright			" open vertical splits to the right
+
 " Mapping Basic
 let mapleader=","
 
@@ -24,6 +29,6 @@ let mapleader=","
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " fugitive
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gb :Gblame<cr>
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gs :Gstatus<cr>
