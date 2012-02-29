@@ -33,6 +33,9 @@ set switchbuf=usetab		" go to open windows if they exist
 
 " Mapping Basic
 let mapleader=","
+set notimeout			" no timeout for mappings
+set ttimeout			" DO timeout for keycodes
+set ttimeoutlen=100		" short timeout for keycodes
 
 " Shortcut Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
