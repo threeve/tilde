@@ -17,6 +17,14 @@ set background=dark		" Prefer dark background
 syntax on			" syntax highlighting GO!
 filetype plugin indent on	" file type detection and plugins GO!
 
+" UI chrome: status, messages, etc.
+set display=lastline		" show as much of last line as possible
+set fillchars=vert:│		" make the UI pretty
+set laststatus=2		" always show status line
+set ruler			" always show cursor position
+set showcmd			" show partial commands
+set visualbell t_vb=		" disable bells
+
 " buffer and window management
 set hidden			" allow hidden buffers (don't close)
 set splitbelow			" open horizontal splits below
