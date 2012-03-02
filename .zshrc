@@ -12,3 +12,5 @@ compinit
 if [[ -x /usr/libexec/path_helper ]]; then
 	eval `/usr/libexec/path_helper -s`
 fi
+# prefer homebrew versions of tools
+export PATH="/usr/local/bin:${PATH}"
