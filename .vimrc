@@ -37,6 +37,14 @@ set notimeout			" no timeout for mappings
 set ttimeout			" DO timeout for keycodes
 set ttimeoutlen=100		" short timeout for keycodes
 
+" Searching
+set hlsearch
+set ignorecase
+set incsearch
+set showmatch
+set smartcase
+set wrapscan
+
 " Shortcut Mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
