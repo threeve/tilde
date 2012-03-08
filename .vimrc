@@ -20,6 +20,10 @@ filetype plugin indent on	" file type detection and plugins GO!
 " UI chrome: status, messages, etc.
 set display=lastline		" show as much of last line as possible
 set fillchars=vert:│		" make the UI pretty
+set fillchars+=stl:─		" NOTE: only looks good with appropriate
+set fillchars+=stlnc:─		" highlights: StatusLine, StatusLineNC,
+				" and VertSplit
+set listchars=eol:↵,tab:⇥\ ,trail:␣
 set laststatus=2		" always show status line
 set ruler			" always show cursor position
 set showcmd			" show partial commands
