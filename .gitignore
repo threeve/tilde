@@ -1,0 +1,25 @@
+
+# ignore Mac OS X home directory stuff
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
+Sites/
+Source/
+.CFUserTextEncoding
+.DS_Store
+.Trash/
+.bash_history
+.cache/
+.histfile
+.irb_history
+.lesshst
+.ssh/
+.subversion/
+.viminfo
+.zcompdump
