@@ -5,6 +5,7 @@
 set nocompatible
 
 " Pathogen: http://github.com/tpope/vim-pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 silent! call pathogen#infect()
 silent! call pathogen#infect('~/Source/vim-bundles')
 
