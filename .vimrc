@@ -13,6 +13,7 @@ set noswapfile
 
 " Colors, styles, etc.
 set background=dark
+colorscheme xoria256
 
 syntax on
 filetype plugin indent on
