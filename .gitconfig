@@ -23,15 +23,20 @@
 	ci = commit
 	co = checkout
 	d = diff --word-diff=color
+	ff = pull --ff
 	hub = !hub
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        idiff = diff --cached
+	lg = log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr)%Creset %C(yellow)%d%Creset' --abbrev-commit --date=relative
+	lgg = !git lg --graph
+        mulch = "!_() { git remote prune origin && git branch --merged | grep -v '^*' | xargs -n 1 git branch -d; }; _"
 	pdiff = difftool -t patdiff
 	poop = stash pop
+        pr = !gh pull-request
 	st = status -sb
 	sub = submodule
+        subup = submodule update --init --recursive
 	w = whatchanged
 	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
-	xlog = log --graph --pretty=format:\"%C(yellow)%h%Creset %ad  %s%C(cyan)%d%Creset %C(green)[%an]%Creset\" --date=short
 [push]
 	default = simple
 [diff]
