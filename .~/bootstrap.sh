@@ -32,3 +32,6 @@ casks=(
     font-source-code-pro
     )
 brew cask install "${casks[@]}"
+
+brew cleanup
+brew cask cleanup
