@@ -33,7 +33,7 @@
 	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
 	xlog = log --graph --pretty=format:\"%C(yellow)%h%Creset %ad  %s%C(cyan)%d%Creset %C(green)[%an]%Creset\" --date=short
 [push]
-	default = matching
+	default = simple
 [diff]
 	tool = patdiff
 [difftool]
