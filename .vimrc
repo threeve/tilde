@@ -14,7 +14,7 @@ set noswapfile
 
 " Colors, styles, etc.
 set background=dark
-colorscheme xoria256
+colorscheme jellybeans
 
 syntax on
 filetype plugin indent on
