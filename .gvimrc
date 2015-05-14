@@ -12,9 +12,9 @@ set guioptions+=c	" console dialogs
 set guioptions+=e	" GUI tab pages
 
 " airline
-autocmd GUIEnter * call TweakAirline()
+autocmd GUIEnter * call s:TweakAirline()
 
-function TweakAirline()
+function s:TweakAirline()
 	if getfontname() =~ "for Powerline"
 		" powerline symbols
 		let g:airline_left_sep = ''
