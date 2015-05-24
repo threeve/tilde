@@ -3,13 +3,20 @@
 " Author: Jason Foreman <jason@threeve.org>
 
 " Use one of these preferred fonts
-set guifont=Source_Code_Pro_for_Powerline:h12,Source_Code_Pro:h12,Menlo:h12,Consolas:h12,Inconsolata:h12
+set guifont=Source_Code_Pro_for_Powerline:h11,Source_Code_Pro:h12,Menlo:h12,Consolas:h12,Inconsolata:h12
 
 set guioptions=
 set guioptions+=a	" integrate with OS pasteboard
 set guioptions+=A	" same for modeless selection
 set guioptions+=c	" console dialogs
-set guioptions+=e	" GUI tab pages
+
+
+" macvim menu customization
+if has('gui_macvim')
+	macmenu File.Close key=<nop>
+	nnoremap <d-w> :bd<cr>
+endif
+
 
 " airline
 autocmd GUIEnter * call s:TweakAirline()

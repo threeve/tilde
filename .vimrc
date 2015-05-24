@@ -14,7 +14,7 @@ set noswapfile
 
 " Colors, styles, etc.
 set background=dark
-colorscheme jellybeans
+colorscheme base16-default
 
 syntax on
 filetype plugin indent on
@@ -22,10 +22,9 @@ filetype plugin indent on
 " UI chrome: status, messages, etc.
 set display=lastline
 set fillchars=vert:│
-set fillchars+=stl:─
-set fillchars+=stlnc:─
-set listchars=eol:↵,tab:⇥\ ,trail:␣
+set listchars=eol:¬,tab:⇥\ ,trail:␣
 set laststatus=2
+set noshowmode
 set ruler
 set showcmd
 set visualbell t_vb=
@@ -51,9 +50,20 @@ set smartcase
 set wrapscan
 
 " Shortcut Mappings
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap ; :
+nnoremap <silent> <c-l> :nohl<cr><c-l>
+nnoremap <leader>ev :split $MYVIMRC<cr>
+nnoremap <leader>eg :split $MYGVIMRC<cr>
+nnoremap <leader>P :set invpaste<cr>
 
-" fugitive
+nnoremap - :Dirvish<cr>
+
+" fugitive: <leader>g
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gv :Gitv!<cr>
+nnoremap <leader>gV :Gitv<cr>
+
+" ctrlp
+let g:ctrlp_max_files = 0
