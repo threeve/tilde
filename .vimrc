@@ -25,6 +25,8 @@ set fillchars=vert:│
 set listchars=eol:¬,tab:⇥\ ,trail:␣
 set laststatus=2
 set noshowmode
+set previewheight=20
+set pumheight=8
 set ruler
 set showcmd
 set visualbell t_vb=
