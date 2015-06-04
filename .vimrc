@@ -4,20 +4,9 @@
 
 set nocompatible
 
-" Pathogen: http://github.com/tpope/vim-pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-silent! call pathogen#infect()
-silent! call pathogen#infect('~/Source/vim-bundles')
-
 " Basic Settings
 set noswapfile
-
-" Colors, styles, etc.
-set background=dark
-colorscheme base16-default
-
-syntax on
-filetype plugin indent on
+set virtualedit=block
 
 " UI chrome: status, messages, etc.
 set display=lastline
@@ -56,16 +45,43 @@ nnoremap ; :
 nnoremap <silent> <c-l> :nohl<cr><c-l>
 nnoremap <leader>ev :split $MYVIMRC<cr>
 nnoremap <leader>eg :split $MYGVIMRC<cr>
-nnoremap <leader>P :set invpaste<cr>
+nnoremap <silent> <leader>p :set paste!<cr>
+nnoremap <leader>/ :grep<space>
+nnoremap <leader>w/ :silent !open "http://www.google.com/search?q=<cword>"<cr>
 
+" Plugins
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'chriskempson/base16-vim'
+Plugin 'bling/vim-airline'
+
+Plugin 'justinmk/vim-dirvish'
 nnoremap - :Dirvish<cr>
 
-" fugitive: <leader>g
+" fugitive/git: <leader>g
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'gregsexton/gitv'
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gv :Gitv!<cr>
 nnoremap <leader>gV :Gitv<cr>
+nnoremap <leader>g/ :Ggrep<space>
+
+call vundle#end()
+
+syntax on
+filetype plugin indent on
+
+" Colors, styles, etc.
+set background=dark
+colorscheme base16-default
 
 " ctrlp
 let g:ctrlp_max_files = 0
