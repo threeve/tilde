@@ -18,6 +18,7 @@ set previewheight=20
 set pumheight=8
 set ruler
 set showcmd
+set updatetime=500
 set visualbell t_vb=
 
 " buffer and window management
@@ -39,6 +40,16 @@ set incsearch
 set showmatch
 set smartcase
 set wrapscan
+
+" terminal settings
+set mouse=a
+if exists('$TMUX')
+	set ttymouse=xterm2
+	let g:airline#extensions#tmuxline#enabled = 0
+endif
+if $TERM_PROFILE =~ "powerline" || $ITERM_PROFILE =~ "powerline"
+	let g:airline_powerline_fonts=1
+endif
 
 " Shortcut Mappings
 nnoremap ; :
