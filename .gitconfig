@@ -3,20 +3,6 @@
 	email = jason@threeve.org
 [github]
 	user = threeve
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore-global
-	quotepath = false
-[credential]
-	helper = osxkeychain
-[apply]
-	whitespace = fix
-[color]
-	branch = auto
-	diff = auto
-	pager = true
-	status = auto
-	ui = auto
 [alias]
 	b = branch
 	br = branch
@@ -37,12 +23,26 @@
         subup = submodule update --init --recursive
 	w = whatchanged
 	whois = "!sh -c 'git log -i -1 --pretty=\"format:%an <%ae>\n\" --author=\"$1\"' -"
-[push]
-	default = simple
+[apply]
+	whitespace = fix
+[color]
+	branch = auto
+	diff = auto
+	pager = true
+	status = auto
+	ui = auto
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore-global
+	quotepath = false
+[credential]
+	helper = osxkeychain
 [diff]
+	algorithm = patience
 	tool = patdiff
 [difftool]
 	prompt = false
 [difftool "patdiff"]
 	cmd = patdiff \"$LOCAL\" \"$REMOTE\" -alt-old a/\"$REMOTE\" -alt-new b/\"$REMOTE\" | cat
-
+[push]
+	default = simple
