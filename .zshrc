@@ -8,6 +8,7 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename '/Users/jason/.zshrc'
 
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -19,3 +20,4 @@ fi
 
 # prefer local versions of tools
 export PATH="/usr/local/bin:${PATH}"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

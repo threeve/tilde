@@ -63,6 +63,34 @@ nnoremap <leader>w/ :silent !open "http://www.google.com/search?q=<cword>"<cr>
 " Plugins
 filetype off
 
+if executable('fzf')
+
+	function! s:buflist()
+		redir => ls
+		silent ls
+		redir END
+		return split(ls, '\n')
+	endfunction
+
+	function! s:bufopen(e)
+		execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+	endfunction
+
+	set rtp+=/usr/local/Cellar/fzf/HEAD
+	" search directory of current file
+	nnoremap <silent> <c-p> :FZF %:p:h<cr>
+	" search pwd
+	nnoremap <silent> g/.   :FZF<cr>
+	" search buffers
+	command! -nargs=0 -bar FZFBuffer call fzf#run({
+	      \   'source':  reverse(<SID>buflist()),
+	      \   'sink':    function('<SID>bufopen'),
+	      \   'options': '+m',
+	      \   'down':    len(<SID>buflist()) + 2
+	      \ })
+	nnoremap <silent> g/b :FZFBuffer<cr>
+endif
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -93,6 +121,3 @@ filetype plugin indent on
 " Colors, styles, etc.
 set background=dark
 colorscheme base16-default
-
-" ctrlp
-let g:ctrlp_max_files = 0
