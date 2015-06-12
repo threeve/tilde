@@ -19,12 +19,16 @@ VirtualBox VMs/
 .Trash/
 .bash_history
 .cache/
+.cargo/
+.cpan/
 .cups/
 .dotfiles/
 .dropbox/
 .histfile
 .irb_history
 .lesshst
+.mail/
+.offlineimap/
 .ssh/
 .subversion/
 .viminfo
