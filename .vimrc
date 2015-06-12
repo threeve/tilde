@@ -63,6 +63,8 @@ nnoremap <leader>w/ :silent !open "http://www.google.com/search?q=<cword>"<cr>
 " Plugins
 filetype off
 
+runtime macros/matchit.vim
+
 if executable('fzf')
 
 	function! s:buflist()
@@ -94,13 +96,16 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-
+" ui stuff
 Plugin 'chriskempson/base16-vim'
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'edkolev/promptline.vim'
 
 Plugin 'justinmk/vim-dirvish'
 nnoremap - :Dirvish<cr>
+
+" Plugin 'christoomey/vim-tmux-navigator'
 
 " fugitive/git: <leader>g
 Plugin 'tpope/vim-fugitive'
@@ -112,6 +117,22 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gv :Gitv!<cr>
 nnoremap <leader>gV :Gitv<cr>
 nnoremap <leader>g/ :Ggrep<space>
+
+" languages
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fsharp/vim-fsharp'
+Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/syntastic'
+let g:syntastic_vim_checkers = ['vint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
+" Plugin 'Valloric/YouCompleteMe'
+
+" misc editing enhancements
+Plugin 'AndrewRadev/inline_edit.vim'
+
+" Plugin 'takac/vim-spotifysearch'
 
 call vundle#end()
 
