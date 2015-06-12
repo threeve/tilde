@@ -33,7 +33,7 @@
 	ui = auto
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore-global
+	excludesfile = ~/.cvsignore
 	quotepath = false
 [credential]
 	helper = osxkeychain
