@@ -39,10 +39,15 @@
 	helper = osxkeychain
 [diff]
 	algorithm = patience
+	mnemonicPrefix = true
 	tool = patdiff
 [difftool]
 	prompt = false
 [difftool "patdiff"]
 	cmd = patdiff \"$LOCAL\" \"$REMOTE\" -alt-old a/\"$REMOTE\" -alt-new b/\"$REMOTE\" | cat
+[merge]
+	tool = vimdiff
+[mergetool]
+	keepBackup = false
 [push]
 	default = simple
