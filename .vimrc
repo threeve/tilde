@@ -110,24 +110,23 @@ if executable('fzf')
 	nnoremap <silent> g/b :FZFBuffer<cr>
 endif
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/bundle')
 
 " ui stuff
-Plugin 'chriskempson/base16-vim'
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'edkolev/promptline.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'edkolev/promptline.vim'
 
-Plugin 'justinmk/vim-dirvish'
+Plug 'justinmk/vim-dirvish'
 nnoremap - :Dirvish<cr>
 
-" Plugin 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 
 " fugitive/git: <leader>g
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'gregsexton/gitv'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'gregsexton/gitv'
 nnoremap <leader>gb :Gblame<cr>
 nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
@@ -136,22 +135,22 @@ nnoremap <leader>gV :Gitv<cr>
 nnoremap <leader>g/ :Ggrep<space>
 
 " languages
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'fsharp/vim-fsharp'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/syntastic'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fsharp/vim-fsharp'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/syntastic'
 let g:syntastic_vim_checkers = ['vint']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 
-" Plugin 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 " misc editing enhancements
-Plugin 'AndrewRadev/inline_edit.vim'
+Plug 'AndrewRadev/inline_edit.vim'
 
-" Plugin 'takac/vim-spotifysearch'
+" Plug 'takac/vim-spotifysearch'
 
-call vundle#end()
+call plug#end()
 
 syntax on
 filetype plugin indent on
